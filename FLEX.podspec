@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = "FLEX"
-  spec.version          = "3.1.2"
+  spec.version          = "4.0.0"
   spec.summary          = "A set of in-app debugging and exploration tools for iOS"
   spec.description      = <<-DESC
                         - Inspect and modify views in the hierarchy.
@@ -36,5 +36,7 @@ Pod::Spec.new do |spec|
   spec.libraries        = [ "z", "sqlite3" ]
   spec.requires_arc     = true
   spec.compiler_flags   = "-Wno-unsupported-availability-guard"
-  spec.public_header_files = [ "Classes/**/FLEXManager.h", "Classes/FLEX.h" ]
+  spec.public_header_files = [ "Classes/Manager/*.h", "Classes/FLEX.h",
+                               "Classes/Core/**/*.h", "Classes/Editing/**/*.h"
+                               "Classes/ObjectExplorers/**/*.h", "Classes/Utility/Runtime/**/*.h" ]
 end
